@@ -1,0 +1,27 @@
+docker run --volume=$(pwd):/home ncf-keras-theano python NeuMF.py --dataset ml-1m --epochs 20 --batch_size 256 --num_factors 8 --layers [64,32,16,8] --reg_mf 0 --reg_layers [0,0,0,0] --num_neg 4 --lr 0.001 --learner adam --verbose 1 --out 1
+Using Theano backend.
+NeuMF arguments: Namespace(batch_size=256, dataset='ml-1m', epochs=20, layers='[64,32,16,8]', learner='adam', lr=0.001, mf_pretrain='', mlp_pretrain='', num_factors=8, num_neg=4, out=1, path='Data/', reg_layers='[0,0,0,0]', reg_mf=0.0, verbose=1) 
+Load data done [11.6 s]. #user=6040, #item=3706, #train=994169, #test=6040
+Init: HR = 0.1136, NDCG = 0.0498
+Iteration 0 [68.7 s]: HR = 0.6055, NDCG = 0.3419, loss = 0.3159 [2.5 s]
+Iteration 1 [53.0 s]: HR = 0.6368, NDCG = 0.3692, loss = 0.2731 [2.5 s]
+Iteration 2 [51.0 s]: HR = 0.6591, NDCG = 0.3827, loss = 0.2636 [2.5 s]
+Iteration 3 [51.4 s]: HR = 0.6639, NDCG = 0.3897, loss = 0.2591 [2.5 s]
+Iteration 4 [51.2 s]: HR = 0.6642, NDCG = 0.3908, loss = 0.2553 [2.5 s]
+Iteration 5 [51.4 s]: HR = 0.6722, NDCG = 0.4004, loss = 0.2521 [2.5 s]
+Iteration 6 [51.4 s]: HR = 0.6704, NDCG = 0.3979, loss = 0.2497 [2.5 s]
+Iteration 7 [51.5 s]: HR = 0.6825, NDCG = 0.4041, loss = 0.2471 [2.5 s]
+Iteration 8 [53.1 s]: HR = 0.6803, NDCG = 0.4062, loss = 0.2449 [2.7 s]
+Iteration 9 [55.0 s]: HR = 0.6816, NDCG = 0.4070, loss = 0.2428 [2.5 s]
+Iteration 10 [52.9 s]: HR = 0.6780, NDCG = 0.4054, loss = 0.2408 [2.5 s]
+Iteration 11 [53.1 s]: HR = 0.6861, NDCG = 0.4106, loss = 0.2395 [2.6 s]
+Iteration 12 [51.9 s]: HR = 0.6834, NDCG = 0.4086, loss = 0.2376 [2.5 s]
+Iteration 13 [52.4 s]: HR = 0.6811, NDCG = 0.4065, loss = 0.2363 [2.5 s]
+Iteration 14 [52.3 s]: HR = 0.6808, NDCG = 0.4073, loss = 0.2351 [2.5 s]
+Iteration 15 [52.0 s]: HR = 0.6816, NDCG = 0.4084, loss = 0.2341 [2.5 s]
+Iteration 16 [51.6 s]: HR = 0.6843, NDCG = 0.4069, loss = 0.2326 [2.6 s]
+Iteration 17 [51.7 s]: HR = 0.6821, NDCG = 0.4044, loss = 0.2319 [2.6 s]
+Iteration 18 [51.6 s]: HR = 0.6839, NDCG = 0.4109, loss = 0.2311 [2.5 s]
+Iteration 19 [51.5 s]: HR = 0.6856, NDCG = 0.4085, loss = 0.2300 [2.5 s]
+End. Best Iteration 11:  HR = 0.6861, NDCG = 0.4106. 
+The best NeuMF model is saved to Pretrain/ml-1m_NeuMF_8_[64,32,16,8]_1567314851.h5
